@@ -5,6 +5,11 @@ export default Ember.Route.extend({
     save: function(){
     },
     cancel: function(){
+    },
+    delete: function(friend){
+      friend.destroyRecord().then( () => {
+        this.transitionTo('friends.index');
+      });
     }
   }
 });
