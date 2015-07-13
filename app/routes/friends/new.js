@@ -9,5 +9,8 @@ export default Ember.Route.extend({
     },
     cancel: function(){
     }
+  },
+  deactivate: function() {
+    this.currentModel.destroyRecord();
   }
 });
