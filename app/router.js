@@ -6,10 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('friends', function(){
+  this.route('friends', function(){
     this.route('new');
     this.route('show', { path: ':friend_id' }, function() {
-      this.resource('articles', function(){
+      this.route('articles', {resetNamespace: true}, function(){
         this.route('new');
       });
     });

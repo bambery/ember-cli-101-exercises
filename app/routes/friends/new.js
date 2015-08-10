@@ -10,7 +10,8 @@ export default Ember.Route.extend({
     cancel: function(){
     }
   },
-  deactivate: function() {
-    this.currentModel.destroyRecord();
+  deactivate: function(){
+    var model = this.modelFor('friends/new');
+    model.rollbackAttributes();
   }
 });
