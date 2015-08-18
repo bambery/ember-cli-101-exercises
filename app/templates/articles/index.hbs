@@ -10,7 +10,11 @@
   </thead>
   <tbody>
     {{#each model as |article|}}
-      {{articles/article-row article=article save="save" articleStates=possibleStates}}
+      {{articles/article-row 
+        article=article 
+        save="save" 
+        articleStates=possibleStates
+      }}
     {{/each}}
   </tbody>
 </table>
