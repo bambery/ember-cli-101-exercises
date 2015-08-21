@@ -15,3 +15,7 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+
+# ignore vim temp files
+*.swo
+*.swp
